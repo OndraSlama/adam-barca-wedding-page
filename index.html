@@ -2,15 +2,24 @@
 <html lang="cs">  
   <head>  
     <meta charset="UTF-8" />  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <meta  
+      name="viewport"  
+      content="width=device-width, initial-scale=1.0"  
+    />  
     <meta  
       name="description"  
       content="Svatební web Adam & Barča. Podívejte se na program, fotografie a kontakty."  
     />  
-    <title>Svatební Web - Adam & Barča</title>  
+    <title>Svatební Web - Adam &amp; Barča</title>  
       
     <!-- Favicon (optional) -->  
     <link rel="icon" href="favicon.ico" />  
+  
+    <!-- Google Font: Quicksand -->  
+    <link   
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap"   
+      rel="stylesheet"  
+    />  
   
     <!-- Tailwind CSS CDN -->  
     <script src="https://cdn.tailwindcss.com"></script>  
@@ -23,21 +32,23 @@
     <section  
       id="hero"  
       class="relative bg-cover bg-center h-screen"  
-      style="background-image: url('https://via.placeholder.com/1920x1080');"  
-      aria-label="Svatební oznámení - Adam & Barča"  
+      style="background-image: url('https://source.unsplash.com/random/1920x1080/?wedding,ceremony');"  
+      aria-label="Svatební oznámení - Adam &amp; Barča"  
     >  
       <div class="absolute inset-0 bg-black opacity-60"></div>  
       <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">  
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg">  
-          Adam & Barča  
+        <h1 class="text-6xl md:text-8xl font-light tracking-wider text-white drop-shadow-lg">  
+          Adam &amp; Barča  
         </h1>  
-        <p class="mt-4 text-lg md:text-2xl text-white">31. srpna 2025</p>  
-        <a href="#info" class="mt-8 button-primary">Jak to bude probíhat</a>  
+        <p class="mt-4 text-xl md:text-2xl text-white">31. srpna 2025</p>  
+        <a href="#info" class="mt-8 button-primary">  
+          Jak to bude probíhat  
+        </a>  
       </div>  
     </section>  
   
     <!-- Information Section -->  
-    <section id="info" class="py-16 px-4 md:px-16 bg-gray-50">  
+    <section id="info" class="py-16 px-4 md:px-16 bg-white">  
       <div class="max-w-6xl mx-auto">  
         <div class="informace-container">  
           <!-- Obřad Section -->  
@@ -55,8 +66,7 @@
               <h3 class="section-subheader">Průvodem na hostinu</h3>  
               <p>14:00</p>  
               <p class="process-note">  
-                Odchod průvodem po ulici Sladová na hostinu, kdo nechce, nebude moci -  
-                přesun auty  
+                Odchod průvodem po ulici Sladová na hostinu – kdo nechce, nebude moci přesun auty.  
               </p>  
             </div>  
   
@@ -92,7 +102,7 @@
                 </svg>  
                 Zobraz na mapě  
               </a>  
-  
+                
               <h3 class="section-subheader mt-6">Doprava a parkování</h3>  
               <ul class="list-disc list-inside space-y-2">  
                 <li>  
@@ -116,18 +126,17 @@
                         d="M8 11V7a4 4 0 018 0v4m0 0v4a4 4 0 11-8 0v-4m8 0H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2h-6"  
                       />  
                     </svg>  
-                    Nejbližší zastávka - Šilingrovo náměstí  
+                    Nejbližší zastávka – Šilingrovo náměstí  
                   </a>  
                 </li>  
                 <li>  
-                  Parkování: Na ulici Pellicova bude pravděpodobně plno, zároveň  
-                  prosíme, abyste neparkovali přímo u kostela.  
+                  Parkování: Na ulici Pellicova bude plno, prosíme, abyste neparkovali přímo u kostela.  
                 </li>  
               </ul>  
             </div>  
           </div>  
   
-          <!-- Vertical Separator (visible on medium screens and above) -->  
+          <!-- Vertical Separator (for medium screens and above) -->  
           <div class="separator hidden md:block"></div>  
   
           <!-- Hostina Section -->  
@@ -149,9 +158,7 @@
             <!-- Location and Parking Info -->  
             <div class="mt-8">  
               <h3 class="section-subheader">Místo konání Hostiny</h3>  
-              <p>  
-                Rajská zahrada Augustiniánského opatství, Mendlovo náměstí 1a, Brno  
-              </p>  
+              <p>Rajska zahrada Augustiniánského opatství, Mendlovo náměstí 1a, Brno</p>  
               <a  
                 href="https://goo.gl/maps/your_reception_map_link"  
                 target="_blank"  
@@ -180,7 +187,7 @@
                 </svg>  
                 Zobraz na mapě  
               </a>  
-  
+                
               <h3 class="section-subheader mt-6">Doprava a parkování</h3>  
               <ul class="list-disc list-inside space-y-2">  
                 <li>  
@@ -204,7 +211,7 @@
                         d="M8 11V7a4 4 0 018 0v4m0 0v4a4 4 0 11-8 0v-4m8 0H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2h-6"  
                       />  
                     </svg>  
-                    Nejbližší zastávka - Mendlovo náměstí  
+                    Nejbližší zastávka – Mendlovo náměstí  
                   </a>  
                 </li>  
                 <li>  
@@ -218,57 +225,55 @@
     </section>  
   
     <!-- Photo Gallery Section -->  
-    <section id="photos" class="py-16 px-4 md:px-16 bg-white">  
+    <section id="photos" class="py-16 px-4 md:px-16 bg-gray-50">  
       <div class="max-w-6xl mx-auto">  
         <h2 class="section-header">Fotografie</h2>  
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">  
-          <!-- Improve by replacing these placeholders with your optimized photos.  
-               Consider adding the "loading='lazy'" attribute for better performance.  
-          -->  
+          <!-- Gallery Images: Replace these URLs with optimized photos -->  
           <div class="overflow-hidden rounded-lg shadow-lg">  
             <img  
-              src="https://via.placeholder.com/400x300"  
-              alt="Photo 1"  
+              src="https://source.unsplash.com/random/400x300/?wedding,smile&sig=1"  
+              alt="Fotografie 1"  
               class="w-full h-60 object-cover transform hover:scale-105 transition duration-300"  
               loading="lazy"  
             />  
           </div>  
           <div class="overflow-hidden rounded-lg shadow-lg">  
             <img  
-              src="https://via.placeholder.com/400x300"  
-              alt="Photo 2"  
+              src="https://source.unsplash.com/random/400x300/?wedding,bride&sig=2"  
+              alt="Fotografie 2"  
               class="w-full h-60 object-cover transform hover:scale-105 transition duration-300"  
               loading="lazy"  
             />  
           </div>  
           <div class="overflow-hidden rounded-lg shadow-lg">  
             <img  
-              src="https://via.placeholder.com/400x300"  
-              alt="Photo 3"  
+              src="https://source.unsplash.com/random/400x300/?wedding,celebration&sig=3"  
+              alt="Fotografie 3"  
               class="w-full h-60 object-cover transform hover:scale-105 transition duration-300"  
               loading="lazy"  
             />  
           </div>  
           <div class="overflow-hidden rounded-lg shadow-lg">  
             <img  
-              src="https://via.placeholder.com/400x300"  
-              alt="Photo 4"  
+              src="https://source.unsplash.com/random/400x300/?wedding,flowers&sig=4"  
+              alt="Fotografie 4"  
               class="w-full h-60 object-cover transform hover:scale-105 transition duration-300"  
               loading="lazy"  
             />  
           </div>  
           <div class="overflow-hidden rounded-lg shadow-lg">  
             <img  
-              src="https://via.placeholder.com/400x300"  
-              alt="Photo 5"  
+              src="https://source.unsplash.com/random/400x300/?wedding,dance&sig=5"  
+              alt="Fotografie 5"  
               class="w-full h-60 object-cover transform hover:scale-105 transition duration-300"  
               loading="lazy"  
             />  
           </div>  
           <div class="overflow-hidden rounded-lg shadow-lg">  
             <img  
-              src="https://via.placeholder.com/400x300"  
-              alt="Photo 6"  
+              src="https://source.unsplash.com/random/400x300/?wedding,party&sig=6"  
+              alt="Fotografie 6"  
               class="w-full h-60 object-cover transform hover:scale-105 transition duration-300"  
               loading="lazy"  
             />  
@@ -285,7 +290,7 @@
           <!-- Adam Card -->  
           <div class="card">  
             <img  
-              src="https://via.placeholder.com/100"  
+              src="https://source.unsplash.com/random/100x100/?man,portrait&sig=7"  
               alt="Adam"  
               class="circular-image"  
               loading="lazy"  
@@ -293,19 +298,17 @@
             <h3 class="section-subheader">Adam</h3>  
             <p class="mb-2">  
               <strong>Email:</strong>  
-              <a href="mailto:adamis1@email.cz" class="section-link"  
-                >adamis1@email.cz</a  
-              >  
+              <a href="mailto:adamis1@email.cz" class="section-link">adamis1@email.cz</a>  
             </p>  
             <p>  
               <strong>Telefon:</strong>  
-              <a href="tel:+420603259523" class="section-link">+420 603 259 523</a>  
+              <a href="tel:+420603259523" class="section-link">+420 603 259523</a>  
             </p>  
           </div>  
           <!-- Barča Card -->  
           <div class="card">  
             <img  
-              src="https://via.placeholder.com/100"  
+              src="https://source.unsplash.com/random/100x100/?woman,portrait&sig=8"  
               alt="Barča"  
               class="circular-image"  
               loading="lazy"  
@@ -313,13 +316,11 @@
             <h3 class="section-subheader">Barča</h3>  
             <p class="mb-2">  
               <strong>Email:</strong>  
-              <a href="mailto:barabaum@gmail.com" class="section-link"  
-                >barabaum@gmail.com</a  
-              >  
+              <a href="mailto:barabaum@gmail.com" class="section-link">barabaum@gmail.com</a>  
             </p>  
             <p>  
               <strong>Telefon:</strong>  
-              <a href="tel:+420776778178" class="section-link">+420 776 778 178</a>  
+              <a href="tel:+420776778178" class="section-link">+420 776 778178</a>  
             </p>  
           </div>  
         </div>  

@@ -1,97 +1,107 @@
-/* Global Styles */  
-body {  
-    font-family: sans-serif;  
+/* Define custom color variables */  
+:root {  
+    --accent-color: #C49BA8; /* Dusty rose */  
+    --accent-color-dark: #A4767A; /* Darker dusty rose */  
+    --text-color: #333333;  
+    --bg-color: #ffffff;  
+  }  
+     
+  /* Global Styles */  
+  body {  
+    font-family: 'Quicksand', sans-serif;  
+    color: var(--text-color);  
+    background-color: var(--bg-color);  
   }  
      
   html {  
     scroll-behavior: smooth;  
   }  
      
-  /* Section Headers */  
+  /* Section Headers – Bigger, thinner and with more letter spacing */  
   .section-header {  
-    font-size: 1.875rem; /* text-3xl */  
-    font-weight: 600;  
-    color: #4f46e5; /* indigo-600 */  
-    margin-bottom: 2rem; /* mb-8 */  
+    font-size: 2.5rem; /* Increased font size */  
+    font-weight: 300;  
+    letter-spacing: 0.1em;  
+    color: var(--accent-color);  
+    margin-bottom: 2rem;  
     text-align: center;  
   }  
      
-  /* Subsection Headers */  
+  /* Subsection Headers – Slightly larger and thinner */  
   .section-subheader {  
-    font-size: 1.5rem; /* text-2xl */  
-    font-weight: 500;  
-    margin-bottom: 0.5rem; /* mb-2 */  
+    font-size: 1.75rem;  
+    font-weight: 300;  
+    letter-spacing: 0.05em;  
+    color: var(--accent-color);  
+    margin-bottom: 0.5rem;  
   }  
      
   /* Links with Icons */  
   .section-link {  
-    color: #4f46e5; /* indigo-600 */  
+    color: var(--accent-color);  
     text-decoration: none;  
-    display: flex;  
+    display: inline-flex;  
     align-items: center;  
     transition: color 0.3s;  
   }  
      
   .section-link:hover {  
-    color: #4338ca; /* indigo-700 */  
+    color: var(--accent-color-dark);  
   }  
      
-  /* Cards for Contacts */  
+  /* Cards for Contact Info */  
   .card {  
-    background-color: #f3f4f6; /* bg-gray-100 */  
-    border-radius: 0.5rem; /* rounded-lg */  
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),  
-      0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-md */  
-    padding: 1.5rem; /* p-6 */  
+    background-color: #f9f9f9;  
+    border-radius: 0.5rem;  
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);  
+    padding: 1.5rem;  
     text-align: center;  
   }  
      
   /* Primary Button */  
   .button-primary {  
-    background-color: #4f46e5; /* bg-indigo-600 */  
-    color: #ffffff; /* text-white */  
-    padding: 0.75rem 1.5rem; /* py-3 px-6 */  
-    border-radius: 9999px; /* rounded-full */  
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),  
-      0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */  
+    background-color: var(--accent-color);  
+    color: #ffffff;  
+    padding: 0.75rem 1.5rem;  
+    border-radius: 9999px;  
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);  
     transition: background-color 0.3s;  
     display: inline-block;  
   }  
      
   .button-primary:hover {  
-    background-color: #4338ca; /* hover:bg-indigo-700 */  
+    background-color: var(--accent-color-dark);  
   }  
      
   /* Footer Background */  
   .footer-bg {  
-    background-color: #4f46e5; /* bg-indigo-600 */  
-    color: #d1d5db; /* text-gray-300 */  
+    background-color: var(--accent-color);  
+    color: #f9f9f9;  
   }  
      
-  /* Informace Section Layout */  
+  /* Layout for Informace Section */  
   .informace-container {  
     display: flex;  
     flex-direction: column;  
-    align-items: center;  
+    align-items: stretch;  
+    gap: 2rem;  
   }  
      
   @media (min-width: 768px) {  
     .informace-container {  
       flex-direction: row;  
       justify-content: center;  
-      align-items: flex-start;  
     }  
-    
     .separator {  
       width: 2px;  
-      background-color: #c7d2fe; /* indigo-200 */  
+      background-color: #e5e5e5;  
       margin: 0 2rem;  
       height: auto;  
       align-self: stretch;  
     }  
   }  
      
-  /* Timeline Styles */  
+  /* Timeline Styles for schedule items */  
   .timeline-item {  
     margin-bottom: 2rem;  
     position: relative;  
@@ -105,22 +115,22 @@ body {
     top: 0.5rem;  
     width: 1rem;  
     height: 1rem;  
-    background: #4f46e5; /* indigo-600 */  
-    border-radius: 9999px; /* full circle */  
+    background: var(--accent-color);  
+    border-radius: 9999px;  
   }  
      
-  /* Procession Notes */  
+  /* Process Notes under timeline items */  
   .process-note {  
-    font-size: 0.875rem; /* text-sm */  
-    color: #6b7280; /* gray-500 */  
+    font-size: 0.875rem;  
+    color: #777777;  
     margin-top: 0.25rem;  
   }  
      
-  /* Circular Images */  
+  /* Circular Images for Contact Cards */  
   .circular-image {  
     width: 100px;  
     height: 100px;  
     border-radius: 9999px;  
     object-fit: cover;  
-    margin: 0 auto 1rem auto;  
+    margin: 0 auto 1rem;  
   }  
