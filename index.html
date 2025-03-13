@@ -1,288 +1,231 @@
-<!DOCTYPE html>  
-<html lang="cs">  
-  <head>  
-    <meta charset="UTF-8" />  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-    <meta name="description" content="Svatební web Adam &amp; Barča. Podívejte se na program, fotografie a kontakty." />  
-    <title>Svatební Web - Adam &amp; Barča</title>  
-  
-    <!-- Favicon (optional) -->  
-    <link rel="icon" href="favicon.ico" />  
-  
-    <!-- Google Font: Quicksand -->  
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet" />  
-  
-    <!-- Tailwind CSS CDN -->  
-    <script src="https://cdn.tailwindcss.com"></script>  
-  
-    <!-- Custom CSS -->  
-    <link rel="stylesheet" href="style.css" />  
-  </head>  
-  <body class="bg-gray-50 text-gray-800">  
-    <!-- Hero Section s dynamickým tmavením/zjasněním -->  
-    <section id="hero" class="relative bg-cover bg-center h-screen" style="background-image: url('pictures/hlavni.jpg');" aria-label="Svatební oznámení - Adam &amp; Barča">  
-        <!-- Přidáváme ID pro lepší cílení -->  
-        <div id="hero-overlay" class="absolute inset-0"></div>  
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">  
-          <h1 class="text-6xl md:text-8xl font-light tracking-wider text-white drop-shadow-lg">Adam &amp; Barča</h1>  
-          <p class="mt-4 text-xl md:text-2xl text-white">31. srpna 2025</p>  
-          <a id="more-info-btn" href="#info" class="mt-8 button-primary">  
-            Jak to bude probíhat  
-          </a>  
-        </div>  
-      </section>  
-  
-    <!-- Information Section -->  
-    <section id="info" class="py-16 px-4 md:px-16 bg-white">  
-      <div class="max-w-6xl mx-auto">  
-        <!-- Použijeme grid se dvěma sloupci a uprostřed dělící sloupec -->  
-        <div class="informace-container">  
-          <!-- Obřad Section -->  
-          <div class="event-section">  
-            <h2 class="section-header">Obřad</h2>  
-            <div class="event-details">  
-              <h3 class="section-subheader">Místo konání</h3>  
-              <p>Betlémský kostel, Pellicova 213, Brno</p>  
-              <a href="https://goo.gl/maps/your_church_map_link" target="_blank" class="section-link mt-4">  
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">  
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" />  
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />  
-                </svg>  
-                Zobraz na mapě  
-              </a>  
-              <h3 class="section-subheader mt-6">Doprava a parkování</h3>  
-              <ul class="list-disc list-inside space-y-2">  
-                <li>  
-                  <a href="https://goo.gl/maps/your_bus_stop_link" target="_blank" class="section-link">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 018 0v4m0 0v4a4 4 0 11-8 0v-4m8 0H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2h-6" />  
-                    </svg>  
-                    Nejbližší zastávka – Šilingrovo náměstí  
-                  </a>  
-                </li>  
-                <li>Parkování: Na ulici Pellicova bude plno, prosíme, abyste neparkovali přímo u kostela.</li>  
-              </ul>  
-            </div>  
-            <!-- Program Obřadu -->  
-            <div class="event-program">  
-              <h3 class="section-subheader mt-8">Program</h3>  
-              <div class="timeline">  
-                <div class="timeline-item">  
-                  <span class="timeline-icon">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6a9 9 0 100 18 9 9 0 000-18z" />  
-                    </svg>  
-                  </span>  
-                  <span class="timeline-time">13:00</span>  
-                  <span class="timeline-label">Začátek Obřadu</span>  
-                </div>  
-                <div class="timeline-item">  
-                  <span class="timeline-icon">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6a9 9 0 100 18 9 9 0 000-18z" />  
-                    </svg>  
-                  </span>  
-                  <span class="timeline-time">13:40</span>  
-                  <span class="timeline-label">Společné focení a gratulace</span>  
-                </div>  
-                <div class="timeline-item">  
-                  <span class="timeline-icon">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6a9 9 0 100 18 9 9 0 000-18z" />  
-                    </svg>  
-                  </span>  
-                  <span class="timeline-time">14:00</span>  
-                  <span class="timeline-label">Průvodem na hostinu</span>  
-                  <p class="process-note">Odchod průvodem po ulici Sladová – kdo nechce, nebude moci přesun auty.</p>  
-                </div>  
-              </div>  
-            </div>  
-          </div>  
-  
-          <!-- Vertikální oddělovač; nyní se zobrazuje i v mobilním zobrazení -->  
-          <div class="separator"></div>  
-  
-          <!-- Hostina Section -->  
-          <div class="event-section">  
-            <h2 class="section-header">Hostina</h2>  
-            <div class="event-details">  
-              <h3 class="section-subheader">Místo konání</h3>  
-              <p>Rajska zahrada Augustiniánského opatství, Mendlovo náměstí 1a, Brno</p>  
-              <a href="https://goo.gl/maps/your_reception_map_link" target="_blank" class="section-link mt-4">  
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">  
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" />  
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />  
-                </svg>  
-                Zobraz na mapě  
-              </a>  
-              <h3 class="section-subheader mt-6">Doprava a parkování</h3>  
-              <ul class="list-disc list-inside space-y-2">  
-                <li>  
-                  <a href="https://goo.gl/maps/your_bus_stop_link_reception" target="_blank" class="section-link">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 018 0v4m0 0v4a4 4 0 11-8 0v-4m8 0H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2h-6" />  
-                    </svg>  
-                    Nejbližší zastávka – Mendlovo náměstí  
-                  </a>  
-                </li>  
-                <li>Parkování: Okolo Mendlova náměstí, na ulici Na Hlinkách.</li>  
-              </ul>  
-            </div>  
-            <!-- Program Hostiny -->  
-            <div class="event-program">  
-              <h3 class="section-subheader mt-8">Program</h3>  
-              <div class="timeline">  
-                <div class="timeline-item">  
-                  <span class="timeline-icon">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6a9 9 0 100 18 9 9 0 000-18z" />  
-                    </svg>  
-                  </span>  
-                  <span class="timeline-time">14:30</span>  
-                  <span class="timeline-label">Přípitek</span>  
-                </div>  
-                <div class="timeline-item">  
-                  <span class="timeline-icon">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6a9 9 0 100 18 9 9 0 000-18z" />  
-                    </svg>  
-                  </span>  
-                  <span class="timeline-time">15:30</span>  
-                  <span class="timeline-label">Krájení dortu</span>  
-                </div>  
-                <div class="timeline-item">  
-                  <span class="timeline-icon">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />  
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6a9 9 0 100 18 9 9 0 000-18z" />  
-                    </svg>  
-                  </span>  
-                  <span class="timeline-time">19:00</span>  
-                  <span class="timeline-label">První tanec a kapela</span>  
-                </div>  
-              </div>  
-            </div>  
-          </div>  
-        </div>  
-      </div>  
-    </section>  
-  
-    <!-- Gallery Section -->  
-    <section id="gallery" class="py-16 px-4 md:px-16 bg-gray-50">  
-      <div class="max-w-6xl mx-auto">  
-        <h2 class="section-header">Fotografie</h2>  
-        <div class="gallery-grid">  
-          <!-- Využíváme lokální fotky z podsložky others – názvy upravte dle skutečnosti -->  
-          <div class="gallery-item gallery-item-large">  
-            <img src="pictures/others/1.jpg" alt="Fotografie 1" loading="lazy" />  
-          </div>  
-          <div class="gallery-item">  
-            <img src="pictures/others/2.jpg" alt="Fotografie 2" loading="lazy" />  
-          </div>  
-          <div class="gallery-item">  
-            <img src="pictures/others/3.jpg" alt="Fotografie 3" loading="lazy" />  
-          </div>  
-          <div class="gallery-item">  
-            <img src="pictures/others/4.jpg" alt="Fotografie 4" loading="lazy" />  
-          </div>  
-          <div class="gallery-item">  
-            <img src="pictures/others/5.jpg" alt="Fotografie 5" loading="lazy" />  
-          </div>  
-          <div class="gallery-item">  
-            <img src="pictures/others/6.jpg" alt="Fotografie 6" loading="lazy" />  
-          </div>  
-        </div>  
-      </div>  
-    </section>  
-  
-    <!-- Contacts Section -->  
-    <section id="contacts" class="py-16 px-4 md:px-16 bg-white">  
-      <div class="max-w-6xl mx-auto">  
-        <h2 class="section-header">Kontakty</h2>  
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">  
-          <!-- Adam Card -->  
-          <div class="card">  
-            <img src="pictures/adam.jpg" alt="Adam" class="circular-image" loading="lazy" />  
-            <h3 class="section-subheader">Adam</h3>  
-            <p class="mb-2">  
-              <strong>Email:</strong>  
-              <a href="mailto:adamis1@email.cz" class="section-link">adamis1@email.cz</a>  
-            </p>  
-            <p>  
-              <strong>Telefon:</strong>  
-              <a href="tel:+420603259523" class="section-link">+420 603 259523</a>  
-            </p>  
-          </div>  
-          <!-- Barča Card -->  
-          <div class="card">  
-            <img src="pictures/barca.jpg" alt="Barča" class="circular-image" loading="lazy" />  
-            <h3 class="section-subheader">Barča</h3>  
-            <p class="mb-2">  
-              <strong>Email:</strong>  
-              <a href="mailto:barabaum@gmail.com" class="section-link">barabaum@gmail.com</a>  
-            </p>  
-            <p>  
-              <strong>Telefon:</strong>  
-              <a href="tel:+420776778178" class="section-link">+420 776 778178</a>  
-            </p>  
-          </div>  
-        </div>  
-      </div>  
-    </section>  
-  
-    <!-- Footer -->  
-    <footer class="py-6 footer-bg text-center">  
-      <p>&copy; 2025 Adam &amp; Barča.</p>  
-    </footer>  
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Svatební web Adam &amp; Barča. Podívejte se na program, fotografie a kontakty." />
+    <title>Svatební Web - Adam &amp; Barča</title>
 
-    <script>  
-       (function() {  
-    const hero = document.getElementById('hero');  
-    const overlay = document.getElementById('hero-overlay');  
-    const button = document.getElementById('more-info-btn');  
-  
-    // Definice minimální a maximální hodnoty vnitřní opacity  
-    const minInnerAlpha = 0.4; 
-    const maxInnerAlpha = 0.7; 
-  
-    hero.addEventListener('mousemove', function(e) {  
-      // Získáme pozici tlačítka  
-      const btnRect = button.getBoundingClientRect();  
-      // Střed tlačítka v globálních (window) souřadnicích  
-      const btnCenterX = btnRect.left + btnRect.width / 2;  
-      const btnCenterY = btnRect.top + btnRect.height / 2;  
-      // Získáme pozici hero sekce (pro převod do lokálních souřadnic)  
-      const heroRect = hero.getBoundingClientRect();  
-      // Spočítáme vzdálenost kurzoru od středu tlačítka  
-      const dx = e.clientX - btnCenterX;  
-      const dy = e.clientY - btnCenterY;  
-      const distance = Math.sqrt(dx * dx + dy * dy);  
-  
-      const maxDistance = window.innerHeight / 2;  
-      const intensity = 1 - Math.min(distance / maxDistance, 1);  
-      const innerAlpha = minInnerAlpha + (maxInnerAlpha - minInnerAlpha) * intensity;  
-      const outerAlpha = Math.max(innerAlpha - 0.2, 0);  
-      const centerX = btnCenterX - heroRect.left;  
-      const centerY = btnCenterY - heroRect.top;  
-        
-      const gradient = `radial-gradient(circle at center, \  
-rgba(0,0,0,${innerAlpha}) 0%, rgba(0,0,0,${innerAlpha}) 40%, rgba(0,0,0,${outerAlpha}) 60%, transparent 100%)`;  
-      // Nastavíme gradient jako background overlayu  
-      overlay.style.backgroundImage = gradient;  
-    });  
-  
-    // Případně, když kurzor opustí hero sekci, můžete gradient resetovat na nějakou výchozí hodnotu.  
-    hero.addEventListener('mouseleave', function() {  
-      // Např.: nastavení gradientu se středem uprostřed obrazovky (nebo ponechání jemného efektu)  
-      overlay.style.backgroundImage = `radial-gradient(circle at center, rgba(0,0,0,${minInnerAlpha}) 0%, rgba(0,0,0,${minInnerAlpha}) 40%, rgba(0,0,0,${minInnerAlpha - 0.2}) 60%,rgba(0,0,0,0) 100%)`;  
-    });  
-  })();  
-      </script>   
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="favicon.ico" />
 
-  </body>  
-</html>  
+    <!-- Google Font: Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Hero Section s dynamickým tmavením/zjasněním -->
+    <section id="hero" class="relative bg-cover bg-center h-screen" style="background-image: url('pictures/hlavni.jpg');" aria-label="Svatební oznámení - Adam &amp; Barča">
+      <div id="hero-overlay" class="absolute inset-0"></div>
+      <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+        <h1 class="text-6xl md:text-8xl font-light tracking-wider text-white drop-shadow-lg">Adam &amp; Barča</h1>
+        <p class="mt-4 text-xl md:text-2xl text-white">30. srpna 2025</p>
+        <a id="more-info-btn" href="#info" class="mt-8 button-primary">
+          Jak to bude probíhat
+        </a>
+      </div>
+    </section>
+
+    <!-- Information Section -->
+    <section id="info" class="py-16 px-4 md:px-16 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="informace-container">
+          <!-- Obřad Section -->
+          <div class="event-section">
+            <h2 class="section-header">Obřad</h2>
+            <p>V Betlémském kostele</p>
+
+            <div class="event-details">
+              <a href="https://maps.app.goo.gl/p7FuVRKdMf1nyMKG8" target="_blank" class="section-link mt-4">
+                <span class="material-icons align-middle mr-2">location_on</span>
+                Pellicova 213, Brno
+              </a>
+              <!-- <h3 class="section-subheader mt-6">Doprava a parkování</h3> -->
+              <!-- <ul class="list-disc list-inside space-y-2"> -->
+                <a href="https://maps.app.goo.gl/bnZQCFGTDT2fkEA4A" target="_blank" class="section-link">
+                    <span class="material-icons align-middle mr-2">directions_bus</span>
+                    Nejbližší zastávka – Šilingrovo náměstí
+                </a>
+                <div><b>Parkování:</b> Na ulici Pellicova bude plno, prosíme, abyste neparkovali přímo u kostela.</div>
+              <!-- </ul> -->
+            </div>
+            <!-- Program Obřadu -->
+            <div class="event-program">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="material-icons timeline-icon">access_time</span>
+                  <span class="timeline-time">13:00</span>
+                  <span class="timeline-label">Začátek Obřadu</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="material-icons timeline-icon">access_time</span>
+                  <span class="timeline-time">13:40</span>
+                  <span class="timeline-label">Společné focení a gratulace</span>
+                </div>
+                <div>
+                    <div class="timeline-item">
+                        <span class="material-icons timeline-icon">access_time</span>
+                        <span class="timeline-time">14:00</span>
+                        <span class="timeline-label">Průvodem na hostinu</span>
+                    </div>
+                    <p class="process-note">Odchod průvodem po ulici Sladová – kdo nechce / nebude moci - přesun auty.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vertikální oddělovač -->
+          <div class="separator"></div>
+
+          <!-- Hostina Section -->
+          <div class="event-section">
+            <h2 class="section-header">Hostina</h2>
+            <p>V rajské zahradě Augustiniánského opatství</p>
+            <div class="event-details">
+              <a href="https://maps.app.goo.gl/KA98reHW15e392Hz6" target="_blank" class="section-link mt-4">
+                <span class="material-icons align-middle mr-2">location_on</span>
+                 Mendlovo náměstí 1a, Brno
+              </a>
+                <div>
+                  <a href="https://maps.app.goo.gl/wboWLNZ9rA7xJajV9" target="_blank" class="section-link">
+                    <span class="material-icons align-middle mr-2">directions_bus</span>
+                    Nejbližší zastávka – Mendlovo náměstí
+                  </a>
+                </div>
+                <div><b>Parkování:</b> Okolo Mendlova náměstí, na ulici Na Hlinkách.</div>
+            </div>
+            <!-- Program Hostiny -->
+            <div class="event-program">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="material-icons timeline-icon">access_time</span>
+                  <span class="timeline-time">14:30</span>
+                  <span class="timeline-label">Přípitek</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="material-icons timeline-icon">access_time</span>
+                  <span class="timeline-time">15:30</span>
+                  <span class="timeline-label">Krájení dortu</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="material-icons timeline-icon">access_time</span>
+                  <span class="timeline-time">19:00</span>
+                  <span class="timeline-label">První tanec a kapela</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-4 md:px-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item-large">
+            <img src="pictures/others/1.jpg" alt="Fotografie 1" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="pictures/others/2.jpg" alt="Fotografie 2" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="pictures/others/3.jpg" alt="Fotografie 3" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="pictures/others/4.jpg" alt="Fotografie 4" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="pictures/others/5.jpg" alt="Fotografie 5" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="pictures/others/6.jpg" alt="Fotografie 6" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-16 px-4 md:px-16 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="section-header">Kontakty</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Adam Card -->
+          <div class="card">
+            <img src="pictures/adam.jpg" alt="Adam" class="circular-image" loading="lazy" />
+            <h3 class="section-subheader">Adam</h3>
+            <p class="mb-2">
+              <strong>Email:</strong>
+              <a href="mailto:adamis1@email.cz" class="section-link">adamis1@email.cz</a>
+            </p>
+            <p>
+              <strong>Telefon:</strong>
+              <a href="tel:+420603259523" class="section-link">+420 603 259523</a>
+            </p>
+          </div>
+          <!-- Barča Card -->
+          <div class="card">
+            <img src="pictures/barca.jpg" alt="Barča" class="circular-image" loading="lazy" />
+            <h3 class="section-subheader">Barča</h3>
+            <p class="mb-2">
+              <strong>Email:</strong>
+              <a href="mailto:barabaum@gmail.com" class="section-link">barabaum@gmail.com</a>
+            </p>
+            <p>
+              <strong>Telefon:</strong>
+              <a href="tel:+420776778178" class="section-link">+420 776 778178</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 footer-bg text-center">
+      <p>&copy; 2025 Adam &amp; Barča.</p>
+    </footer>
+
+    <script>
+      (function() {
+        const hero = document.getElementById('hero');
+        const overlay = document.getElementById('hero-overlay');
+        const button = document.getElementById('more-info-btn');
+
+        // Definice minimální a maximální hodnoty vnitřní opacity
+        const minInnerAlpha = 0.4;
+        const maxInnerAlpha = 0.7;
+
+        hero.addEventListener('mousemove', function(e) {
+          const btnRect = button.getBoundingClientRect();
+          const btnCenterX = btnRect.left + btnRect.width / 2;
+          const btnCenterY = btnRect.top + btnRect.height / 2;
+          const heroRect = hero.getBoundingClientRect();
+          const dx = e.clientX - btnCenterX;
+          const dy = e.clientY - btnCenterY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          const maxDistance = window.innerHeight / 2;
+          const intensity = 1 - Math.min(distance / maxDistance, 1);
+          const innerAlpha = minInnerAlpha + (maxInnerAlpha - minInnerAlpha) * intensity;
+          const outerAlpha = Math.max(innerAlpha - 0.2, 0);
+          const centerX = btnCenterX - heroRect.left;
+          const centerY = btnCenterY - heroRect.top;
+
+          const gradient = `radial-gradient(circle at center, rgba(0,0,0,${innerAlpha}) 0%, rgba(0,0,0,${innerAlpha}) 40%, rgba(0,0,0,${outerAlpha}) 60%, transparent 100%)`;
+          overlay.style.backgroundImage = gradient;
+        });
+
+        hero.addEventListener('mouseleave', function() {
+          overlay.style.backgroundImage = `radial-gradient(circle at center, rgba(0,0,0,${minInnerAlpha}) 0%, rgba(0,0,0,${minInnerAlpha}) 40%, rgba(0,0,0,${minInnerAlpha - 0.2}) 60%, rgba(0,0,0,0) 100%)`;
+        });
+      })();
+    </script>
+  </body>
+</html>

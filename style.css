@@ -1,177 +1,231 @@
-:root {  
-    --accent-color: #d17d96;      /* O něco výraznější dusty rose */  
-    --accent-color-dark: #b15b74; /* Tmavší varianta */  
-    --text-color: #333333;  
-    --bg-color: #ffffff;  
-  }  
-     
-  /* GLOBAL STYLES */  
-  body {  
-    font-family: 'Quicksand', sans-serif;  
-    color: var(--text-color);  
-    background-color: var(--bg-color);  
-  }  
-     
-  html {  
-    scroll-behavior: smooth;  
-  }  
-     
-  /* Section Headers */  
-  .section-header {  
-    font-size: 2.5rem;  
-    font-weight: 300;  
-    letter-spacing: 0.1em;  
-    color: var(--accent-color);  
-    margin-bottom: 2rem;  
-    text-align: center;  
-  }  
-     
-  /* Subsection Headers */  
-  .section-subheader {  
-    font-size: 1.75rem;  
-    font-weight: 300;  
-    letter-spacing: 0.05em;  
-    color: var(--accent-color);  
-    margin-bottom: 0.5rem;  
-  }  
-
+/* Upravený style.css */
+:root {
+    --accent-color: #d17d96;
+    --accent-color-dark: #b15b74;
+    --text-color: #333333;
+    --bg-color: #ffffff;
+  }
+  
+  /* GLOBAL STYLY */
+  body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    /* line-height: 2; */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Section & Subsection Headers */
+  .section-header {
+    font-size: 2.7rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--accent-color);
+    /* margin-bottom: 2rem; */
+    text-align: center;
+  }
+  
+  .section-subheader {
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Hero overlay s výchozím gradientem */
   #hero-overlay {
     position: absolute;
     inset: 0;
     background-image: radial-gradient(circle at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.2) 60%, transparent 100%);
+  }
+  
+  /* Odkazy s ikonami */
+  .section-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s;
+    font-size: 1.2rem;
+  }
+  
+  .section-link:hover {
+    color: var(--accent-color-dark);
+  }
+  
+  /* Kontaktní karty */
+  .card {
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Primary Button */
+  .button-primary {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    transition: background-color 0.3s;
+    display: inline-block;
+  }
+  
+  .button-primary:hover {
+    background-color: var(--accent-color-dark);
+  }
+  
+  /* Footer */
+  .footer-bg {
+    background-color: var(--accent-color);
+    color: #f9f9f9;
+  }
+  
+  /* Informační sekce */
+  .informace-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    padding: 2rem 1rem;
+  }
+  
+  /* Jednotlivé event sekce */
+  .event-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .event-details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    /* padding: 2rem 1rem; */
+    max-width: 600px;
+    align-items: center;
+  }
+  
+  /* Oddělovač */
+  .separator {
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    margin: 2rem 0;
+  }
+  
+  /* Timeline */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    margin: 2rem 0;
+    padding-left: 2.5rem;
+    
+  }
+  
+  
+  /* Položky časové osy */
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    
+
+  }
+  
+  /* ikony časové osy */
+  .timeline-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    color: var(--accent-color);
+    font-size: 1.3rem;
+  }
+  
+  /* čas a popis */
+  .timeline-time {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+
+  }
+  
+  .timeline-label {
+    font-size: 1.05rem;
+    text-align: left;
+    min-width: 200px;
+    font-size: 1.2rem;
+
+  }
+  
+  .process-note {
+    font-size: 0.95rem;
+    color: #777;
+    margin-top: 0.5rem;
+    padding-left: 2rem;
+    text-align: left;
+  }
+  
+  /* Kulatá fotografie pro kontakty */
+  .circular-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+  }
+  
+  /* Gallery grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+  
+  .gallery-item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Desktopové nastavení pro informační sekci */
+  @media (min-width: 768px) {
+    .informace-container {
+      align-items: start;
+      justify-content: center;
     }
-     
-  /* Links with Icons */  
-  .section-link {  
-    color: var(--accent-color);  
-    text-decoration: none;  
-    display: inline-flex;  
-    align-items: center;  
-    transition: color 0.3s;  
-  }  
-     
-  .section-link:hover {  
-    color: var(--accent-color-dark);  
-  }  
-     
-  /* Cards for Contact Info */  
-  .card {  
-    background-color: #f9f9f9;  
-    border-radius: 0.5rem;  
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);  
-    padding: 1.5rem;  
-    text-align: center;  
-  }  
-     
-  /* Primary Button */  
-  .button-primary {  
-    background-color: var(--accent-color);  
-    color: #ffffff;  
-    padding: 0.75rem 1.5rem;  
-    border-radius: 9999px;  
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);  
-    transition: background-color 0.3s;  
-    display: inline-block;  
-  }  
-     
-  .button-primary:hover {  
-    background-color: var(--accent-color-dark);  
-  }  
-     
-  /* Footer Background */  
-  .footer-bg {  
-    background-color: var(--accent-color);  
-    color: #f9f9f9;  
-  }  
-     
- /* Layout for Informace Section */  
- .informace-container {  
-    display: flex;  
-    flex-direction: column;  
-    align-items: stretch;  
-    gap: 2rem;  
-  }  
-     
-     
-  /* Timeline – obsahuje jednotlivé položky programu */  
-  .timeline {  
-    margin-top: 1rem;  
-    position: relative;  
-  }  
-     
-  /* Jednotlivé položky timeline */  
-  .timeline-item {  
-    display: flex;  
-    align-items: center;  
-    margin-bottom: 1.5rem;  
-    padding-left: 0.5rem;  
-  }  
-     
-  .timeline-icon {  
-    display: inline-flex;  
-    align-items: center;  
-    justify-content: center;  
-    margin-right: 0.5rem;  
-    color: var(--accent-color);  
-  }  
-     
-  .timeline-time {  
-    font-weight: bold;  
-    margin-right: 0.5rem;  
-  }  
-     
-  .timeline-label {  
-    font-size: 0.95rem;  
-  }  
-     
-  .process-note {  
-    font-size: 0.875rem;  
-    color: #777777;  
-    margin-top: 0.25rem;  
-    padding-left: 1.7rem;  
-  }  
-     
-  /* Circular Images for Contact Cards */  
-  .circular-image {  
-    width: 100px;  
-    height: 100px;  
-    border-radius: 9999px;  
-    object-fit: cover;  
-    margin: 0 auto 1rem;  
-  }  
-     
-  /* Gallery Grid – přehlednější, prezentace fotek */  
-  .gallery-grid {  
-    display: grid;  
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
-    gap: 1rem;  
-  }  
-     
-  .gallery-item {  
-    position: relative;  
-    overflow: hidden;  
-    border-radius: 0.5rem;  
-  }  
-     
-  .gallery-item-large {  
-    grid-column: span 2;  
-    grid-row: span 2;  
-  }  
-     
-  .gallery-item img {  
-    width: 100%;  
-    height: 100%;  
-    object-fit: cover;  
-    transition: transform 0.3s ease;  
-  }  
-     
-  .gallery-item:hover img {  
-    transform: scale(1.05);  
-  }  
-     
-  /* Responsivita – pokud je obrazovka velmi malá, necháváme grid-položky přesto vedle sebe */  
-  @media (max-width: 640px) {  
-    .informace-container {  
-      grid-template-columns: 1fr auto 1fr;  
-    }  
-  }  
+    .event-section {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+  }
+  
