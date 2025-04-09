@@ -1,6 +1,6 @@
 /* Upravený style.css */
 :root {
-    --accent-color: #d17d96;
+    --accent-color: #b00035;
     --accent-color-dark: #b15b74;
     --text-color: #333333;
     --bg-color: #ffffff;
@@ -8,7 +8,7 @@
   
   /* GLOBAL STYLY */
   body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Winky Sans', sans-serif;
     color: var(--text-color);
     background-color: var(--bg-color);
     /* line-height: 2; */
@@ -20,7 +20,7 @@
   
   /* Section & Subsection Headers */
   .section-header h2 {
-    font-size: 2.7rem;
+    font-size: 3rem;
     font-weight: 300;
     letter-spacing: 0.1em;
     color: var(--accent-color);
@@ -29,12 +29,13 @@
   }
   .section-header p {
     letter-spacing: 0.1em;
+	font-size: 1.3rem;
     color: var(--accent-color);
     /* margin-bottom: 2rem; */
   }
   
   .section-subheader {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 300;
     letter-spacing: 0.05em;
     color: var(--accent-color);
@@ -55,7 +56,7 @@
     display: inline-flex;
     align-items: center;
     transition: color 0.3s;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   
   .section-link:hover {
@@ -180,6 +181,7 @@
     margin-top: 0.5rem;
     padding-left: 2rem;
     text-align: left;
+	font-size: 1.1rem;
   }
   
   /* Kulatá fotografie pro kontakty */
