@@ -1,4 +1,3 @@
-/* Upravený style.css */
 :root {
     --accent-color: #b00035;
     --accent-color-dark: #b15b74;
@@ -210,7 +209,6 @@
     width: 200px;
     aspect-ratio: 1 / 1; /* Make items square, adjust as needed (e.g., 3 / 2) */
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
     border: 5px solid white;
     background-color: white; /* Background for border effect */
@@ -220,8 +218,10 @@
     justify-content: center;
     align-items: center;
     transform: scale(1) rotate(var(--initial-rotation, 0deg)); /* Use CSS variable for rotation */
+    backface-visibility: hidden; /* Helps promote to own layer */
+    will-change: transform, box-shadow; /* Hint the browser about upcoming changes */
+
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    /* Initial transform is set by JS */
   }
 
   .gallery-item img {
@@ -230,7 +230,6 @@
     height: 100%;
     object-fit: cover; /* Cover the container, maintain aspect ratio, crop if needed */
     object-position: center; /* Center the image within its box */
-    transition: transform 0.3s ease-in-out; /* Add transition to image too if needed */
   }
 
   .gallery-item:hover,
@@ -240,11 +239,6 @@
     z-index: 10; /* Bring active/hovered item to the front */
   }
 
-  /* Optional: slight zoom on image itself on hover/active */
-  /* .gallery-item:hover img,
-  .gallery-item.active img {
-      transform: scale(1.05);
-  } */
   /* --- End Gallery Pinboard Styles --- */
 
 
