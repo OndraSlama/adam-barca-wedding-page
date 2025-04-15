@@ -5,7 +5,7 @@
     --text-color: #333333;
     --bg-color: #ffffff;
   }
-  
+
   /* GLOBAL STYLY */
   body {
     font-family: 'Winky Sans', sans-serif;
@@ -13,11 +13,11 @@
     background-color: var(--bg-color);
     /* line-height: 2; */
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   /* Section & Subsection Headers */
   .section-header h2 {
     font-size: 3rem;
@@ -31,9 +31,10 @@
     letter-spacing: 0.1em;
 	font-size: 1.3rem;
     color: var(--accent-color);
+    text-align: center;
     /* margin-bottom: 2rem; */
   }
-  
+
   .section-subheader {
     font-size: 2rem;
     font-weight: 300;
@@ -41,14 +42,15 @@
     color: var(--accent-color);
     margin-bottom: 0.5rem;
   }
-  
+
   /* Hero overlay s výchozím gradientem */
   #hero-overlay {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    /* Gradient is now controlled by JS */
+    transition: background-image 0.3s ease-out; /* Smooth transition for gradient */
   }
-  
+
   /* Odkazy s ikonami */
   .section-link {
     color: var(--accent-color);
@@ -58,11 +60,11 @@
     transition: color 0.3s;
     font-size: 1.3rem;
   }
-  
+
   .section-link:hover {
     color: var(--accent-color-dark);
   }
-  
+
   /* Kontaktní karty */
   .card {
     background-color: #f9f9f9;
@@ -72,7 +74,7 @@
     text-align: center;
     margin-bottom: 2rem;
   }
-  
+
   /* Primary Button */
   .button-primary {
     background-color: var(--accent-color);
@@ -83,17 +85,17 @@
     transition: background-color 0.3s;
     display: inline-block;
   }
-  
+
   .button-primary:hover {
     background-color: var(--accent-color-dark);
   }
-  
+
   /* Footer */
   .footer-bg {
     background-color: var(--accent-color);
     color: #f9f9f9;
   }
-  
+
   /* Informační sekce */
   .informace-container {
     display: flex;
@@ -101,7 +103,7 @@
     row-gap: 4rem;
     padding: 2rem 1rem;
   }
-  
+
   /* Jednotlivé event sekce */
   .event-section {
     display: flex;
@@ -121,7 +123,7 @@
     max-width: 600px;
     align-items: center;
   }
-  
+
   /* Oddělovač */
   .separator {
     width: 100%;
@@ -129,7 +131,7 @@
     background-color: #ddd;
     margin: 2rem 0;
   }
-  
+
   /* Timeline */
   .timeline {
     display: flex;
@@ -137,18 +139,18 @@
     row-gap: 3rem;
     margin: 2rem 0;
     padding-left: 2.5rem;
-    
+
   }
-  
-  
+
+
   /* Položky časové osy */
   .timeline-item {
     display: flex;
     align-items: center;
-    
+
 
   }
-  
+
   /* ikony časové osy */
   .timeline-icon {
     display: inline-flex;
@@ -158,7 +160,7 @@
     color: var(--accent-color);
     font-size: 1.3rem;
   }
-  
+
   /* čas a popis */
   .timeline-time {
     font-weight: bold;
@@ -166,7 +168,7 @@
     font-size: 1.2rem;
 
   }
-  
+
   .timeline-label {
     font-size: 1.05rem;
     text-align: left;
@@ -174,7 +176,7 @@
     font-size: 1.2rem;
 
   }
-  
+
   .process-note {
     font-size: 0.95rem;
     color: #777;
@@ -183,7 +185,7 @@
     text-align: left;
 	font-size: 1.1rem;
   }
-  
+
   /* Kulatá fotografie pro kontakty */
   .circular-image {
     width: 100px;
@@ -192,47 +194,117 @@
     object-fit: cover;
     margin: 0 auto 1rem;
   }
-  
-  /* Gallery grid */
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+
+  /* --- Gallery Pinboard Styles --- */
+  .gallery-pinboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Align items vertically if they wrap unevenly */
+    gap: 2rem; /* Adjust gap as needed */
+    padding: 1rem;
   }
-  
+
   .gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 0.5rem;
+    /* Define size - let's use aspect-ratio for consistency */
+    width: 200px;
+    aspect-ratio: 1 / 1; /* Make items square, adjust as needed (e.g., 3 / 2) */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid white;
+    background-color: white; /* Background for border effect */
+    overflow: hidden; /* Hide parts of image that overflow due to object-fit: cover */
+    position: relative; /* Needed for z-index */
+    display: flex; /* Use flex to center image */
+    justify-content: center;
+    align-items: center;
+    transform: scale(1) rotate(var(--initial-rotation, 0deg)); /* Use CSS variable for rotation */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Initial transform is set by JS */
   }
-  
-  .gallery-item-large {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  
+
   .gallery-item img {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    object-fit: cover; /* Cover the container, maintain aspect ratio, crop if needed */
+    object-position: center; /* Center the image within its box */
+    transition: transform 0.3s ease-in-out; /* Add transition to image too if needed */
   }
-  
-  .gallery-item:hover img {
-    transform: scale(1.05);
+
+  .gallery-item:hover,
+  .gallery-item.active {
+    transform: scale(1.15) rotate(0deg) !important; /* Override initial rotation */
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Bring active/hovered item to the front */
   }
-  
+
+  /* Optional: slight zoom on image itself on hover/active */
+  /* .gallery-item:hover img,
+  .gallery-item.active img {
+      transform: scale(1.05);
+  } */
+  /* --- End Gallery Pinboard Styles --- */
+
+
   /* Desktopové nastavení pro informační sekci */
   @media (min-width: 768px) {
     .informace-container {
-      align-items: start;
-      justify-content: center;
+      flex-direction: row; /* Side-by-side on desktop */
+      align-items: flex-start; /* Align tops */
+      justify-content: space-around; /* Space out sections */
+      gap: 3rem; /* Gap between sections */
+      padding: 2rem;
     }
     .event-section {
-      max-width: 500px;
-      margin: 0 auto;
-      text-align: center;
+      max-width: none; /* Allow sections to take available space */
+      flex: 1; /* Allow sections to grow */
+      margin: 0; /* Reset margin */
+      text-align: left; /* Align text left within sections */
+    }
+    .event-details {
+        align-items: flex-start; /* Align details left */
+    }
+    .timeline {
+        padding-left: 0.5rem; /* Adjust padding if needed */
+    }
+    .timeline-item {
+        justify-content: flex-start; /* Align timeline items left */
+    }
+    .process-note {
+        padding-left: 2.5rem; /* Keep note indented relative to timeline items */
     }
 
+    .separator {
+        width: 2px; /* Vertical separator */
+        height: auto; /* Auto height */
+        align-self: stretch; /* Stretch to container height */
+        margin: 0 2rem; /* Margin around separator */
+    }
+
+    /* Adjust gallery item size on larger screens if desired */
+    .gallery-item {
+        width: 250px; /* Keep aspect ratio defined earlier */
+    }
   }
-  
+
+  /* Further responsive adjustments if needed */
+  @media (max-width: 767px) {
+    /* Ensure separator is horizontal on mobile */
+    .separator {
+        width: 80%;
+        height: 2px;
+        margin: 2rem auto; /* Center horizontally */
+    }
+    .section-header h2 {
+        font-size: 2.5rem; /* Slightly smaller header on mobile */
+    }
+    .section-subheader {
+        font-size: 1.8rem;
+    }
+    .gallery-item {
+        width: 150px; /* Smaller items on mobile, keep aspect ratio */
+        gap: 1rem;
+    }
+  }
